@@ -3,7 +3,7 @@
 脚本会给内置的码进行助力
 活动时间：2021-12-12日结束
 活动入口：京东APP首页右边浮动飘窗
-
+*/
 
 const $ = new Env('金榜年终奖');
 const notify = $.isNode() ? require('./sendNotify') : '';
