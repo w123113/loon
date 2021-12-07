@@ -3,23 +3,8 @@
 脚本会给内置的码进行助力
 活动时间：2021-12-12日结束
 活动入口：京东APP首页右边浮动飘窗
-已支持IOS双京东账号,Node.js支持N个京东账号
-脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
-============Quantumultx===============
-[task_local]
-#金榜年终奖
-10 0,2 * * * https://raw.githubusercontent.com/222222/sync/jd_scripts/jd_split.js, tag=年终奖, enabled=true
 
-================Loon==============
-[Script]
-cron "10 0,2 * * *" script-path=https://raw.githubusercontent.com/222222/sync/jd_scripts/jd_split.js,tag=年终奖
 
-===============Surge=================
-金榜年终奖 = type=cron,cronexp="10 0,2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/222222/sync/jd_scripts/jd_split.js
-
-============小火箭=========
-金榜年终奖 = type=cron,script-path=https://raw.githubusercontent.com/222222/sync/jd_scripts/jd_split.js, cronexpr="10 0,2 * * *", timeout=3600, enable=true
- */
 const $ = new Env('金榜年终奖');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
